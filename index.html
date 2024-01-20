@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <title>GitHub Repositories</title>
+</head>
+
+<body>
+    
+    <header class="container">
+        <div class="input-group ">
+            <input type="text" class="form-control" id="githubUsername" placeholder="Enter GitHub username...">
+            <div class="input-group-append">
+                <button class="btn btn-outline-secondary" type="button" onclick="changeUser()">Change User</button>
+            </div>
+        </div>
+        <!-- User Profile Container -->
+        <section id="user-profile" class="mb-4"></section>
+
+           <!-- Loader Container -->
+           <div id="loader" class="loader"></div>
+
+        <!-- Add this select element for repositories per page -->
+        <div class="input-group mb-3">
+            <select class="custom-select" id="repositoriesPerPageSelect" onchange="changeRepositoriesPerPage()">
+                <option value="10" selected>10 repositories per page</option>
+                <option value="20">20 repositories per page</option>
+                <option value="50">50 repositories per page</option>
+                <option value="100">100 repositories per page</option>
+            </select>
+        </div>
+    </header>
+
+    <main class="container">
+        <!-- Repository Boxes Container -->
+        <section id="repositories" class="d-flex flex-wrap justify-content-around mb-4"></section>
+
+        <!-- Pagination Container -->
+        <nav aria-label="Page navigation" class="text-center">
+            <ul id="pagination" class="pagination justify-content-center">
+                
+            </ul>
+        </nav>
+        
+
+     
+
+        <!-- Search Bar Container -->
+        <div class="input-group mt-4">
+            <!-- Pagination buttons -->
+            <div class="row w-100 ">
+                <div class="col text-left mb-4">
+                    <button class="btn btn-outline-secondary" type="button" onclick="changePage(currentPage - 1)">Older</button>
+                </div>
+                <div class="col text-right mb-4">
+                    <button class="btn btn-outline-secondary" type="button" onclick="changePage(currentPage + 1)">Newer</button>
+                </div>
+            </div>
+        </div>
+        
+        
+        
+    </main>
+
+    <!-- Bootstrap JS and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.4.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+    <!-- Custom JavaScript -->
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,105 @@
+
+
+body {
+    font-family: 'Arial', sans-serif;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+#user-profile {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+#user-profile img {
+    border-radius: 50%;
+    margin-right: 10px; /* Add margin to the right of the profile picture */
+}
+
+#user-profile h2,
+#user-profile p {
+    margin: 5px 0; /* Add margin to the name, bio, and location */
+    
+}
+
+#repositories {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.card {
+    width: 300px;
+    margin: 10px;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.card-body {
+    padding: 1.25rem;
+}
+
+.card-title {
+    font-size: 1.25rem;
+    margin-bottom: 0.75rem;
+    color: #0000FF;
+}
+
+.card-text {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 0.5rem;
+}
+
+.card-text.programming-language {
+    font-size: 0.9rem;
+    color: white;
+    background: #4B7BF5 ;
+    display: inline;  
+display: inline-block;
+border-radius: 4px;
+}
+
+.card:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transform: translateY(-5px);
+}
+
+.pagination {
+    margin-top: 20px;
+    text-align: center; /* Center align pagination */
+}
+
+#loader {
+    border: 8px solid #f3f3f3;
+    border-top: 8px solid #3498db;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+    display: none;
+    margin: 20px auto;
+}
+
+.input-group {
+    margin-top: 20px;
+    text-align: center; /* Center align input group */
+}
+
+/* Styling for Older and Newer buttons */
+.input-group-append button {
+    margin: 5px; /* Add margin to the buttons */
+}
+
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+    .card {
+        width: 100%;
+    }
+}
